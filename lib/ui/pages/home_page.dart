@@ -2,6 +2,7 @@ import 'package:dev_task/ui/widgets/button_period_widget.dart';
 import 'package:dev_task/ui/widgets/edit_photo_widget.dart';
 import 'package:dev_task/ui/widgets/list_tile_widget.dart';
 import 'package:dev_task/ui/widgets/logoff_widget.dart';
+import 'package:dev_task/ui/widgets/period_add_dialog_widget.dart';
 import 'package:dev_task/ui/widgets/text_field_custom_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +74,14 @@ class _HomePageState extends State<HomePage> {
             ),
             ButtonPeriodWidget(
               label: 'Adicionar Período',
-              onPressed: () {},
+              onPressed: () {
+                showAdaptiveDialog(
+                  context: context,
+                  builder: (context) {
+                    return PeridAddDialogWidget();
+                  },
+                );
+              },
             ),
             const SizedBox(
               height: 16,
