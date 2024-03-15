@@ -71,29 +71,20 @@ class PeridAddDialogWidget extends StatelessWidget {
                     ],
                   ),
                   const Divider(),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Categoria:',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      DropdownMenuItem(
-                        child: Text('Categoria 1'),
-                      )
-                    ],
+                  TextinputMetaWidget(
+                    label: 'Categoria',
+                    textEditingController: meta1TextEditingController,
                   ),
                 ],
               ),
             ),
           ),
+          const SizedBox(height: 16),
           TextinputMetaWidget(
             label: 'Meta 1',
             textEditingController: meta1TextEditingController,
           ),
+          const SizedBox(height: 16),
           TextinputMetaWidget(
             label: 'Meta 2',
             textEditingController: meta2TextEditingController,
@@ -103,7 +94,9 @@ class PeridAddDialogWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ButtonPeriodWidget(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 label: 'Concluir',
               ),
             ],

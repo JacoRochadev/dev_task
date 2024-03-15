@@ -25,8 +25,11 @@ class TextinputMetaWidget extends StatelessWidget {
         ),
         Expanded(
           flex: 1,
-          child: TextFormField(
-            controller: textEditingController,
+          child: SizedBox(
+            height: 30,
+            child: TextFormField(
+              controller: textEditingController,
+            ),
           ),
         ),
       ],

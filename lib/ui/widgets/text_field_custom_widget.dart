@@ -25,8 +25,11 @@ class TextFieldCustomWidget extends StatelessWidget {
         const SizedBox(
           height: 5,
         ),
-        TextFormField(
-          controller: controller,
+        SizedBox(
+          height: 35,
+          child: TextFormField(
+            controller: controller,
+          ),
         ),
       ],
     ));
